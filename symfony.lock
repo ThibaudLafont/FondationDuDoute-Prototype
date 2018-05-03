@@ -1,4 +1,16 @@
 {
+    "cocur/slugify": {
+        "version": "v3.0"
+    },
+    "components/elfinder": {
+        "version": "3.0"
+    },
+    "components/jquery": {
+        "version": "3.3.1"
+    },
+    "components/jqueryui": {
+        "version": "1.12.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -56,6 +68,18 @@
     "doctrine/orm": {
         "version": "v2.6.1"
     },
+    "guzzlehttp/psr7": {
+        "version": "1.4.2"
+    },
+    "helios-ag/fm-elfinder-bundle": {
+        "version": "7.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "7.0",
+            "ref": "fb9152ee3538f968d9e0f2c763ecbe4ab63eff26"
+        }
+    },
     "hillrange/ckeditor": {
         "version": "0.1",
         "recipe": {
@@ -65,8 +89,44 @@
             "ref": "d3ce607b0f85f98d6cab2b6edff2cd6a47e3f577"
         }
     },
+    "imagine/imagine": {
+        "version": "v0.7.1"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
+    },
+    "jms/metadata": {
+        "version": "1.6.0"
+    },
+    "jms/parser-lib": {
+        "version": "1.0.0"
+    },
+    "jms/serializer": {
+        "version": "1.11.0"
+    },
+    "jms/serializer-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "fe60ce509ef04a3f40da96e3979bc8d9b13b2372"
+        }
+    },
+    "knplabs/gaufrette": {
+        "version": "v0.5.0"
+    },
+    "knplabs/knp-menu": {
+        "version": "2.3.0"
+    },
+    "knplabs/knp-menu-bundle": {
+        "version": "v2.2.1"
+    },
+    "kriswallsmith/assetic": {
+        "version": "v1.4.0"
+    },
+    "kriswallsmith/buzz": {
+        "version": "v0.16.1"
     },
     "nikic/php-parser": {
         "version": "v4.0.1"
@@ -77,17 +137,29 @@
     "ocramius/proxy-manager": {
         "version": "2.2.0"
     },
+    "phpcollection/phpcollection": {
+        "version": "0.5.0"
+    },
+    "phpoption/phpoption": {
+        "version": "1.5.0"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.0.2"
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "robloach/component-installer": {
+        "version": "0.2.3"
     },
     "sensio/framework-extra-bundle": {
         "version": "4.0",
@@ -98,11 +170,59 @@
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
     },
+    "sonata-project/admin-bundle": {
+        "version": "3.31",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.31",
+            "ref": "0e5931df1732e3dccfba42a20853049e5e9db6ae"
+        }
+    },
+    "sonata-project/block-bundle": {
+        "version": "3.12.1"
+    },
+    "sonata-project/cache": {
+        "version": "2.0.1"
+    },
+    "sonata-project/core-bundle": {
+        "version": "3.9",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.9",
+            "ref": "2f69bd1995730b73a5211a9707622fb25a925df7"
+        }
+    },
+    "sonata-project/datagrid-bundle": {
+        "version": "2.3.1"
+    },
+    "sonata-project/doctrine-extensions": {
+        "version": "1.0.2"
+    },
+    "sonata-project/doctrine-orm-admin-bundle": {
+        "version": "3.5.1"
+    },
+    "sonata-project/easy-extends-bundle": {
+        "version": "2.5.0"
+    },
+    "sonata-project/exporter": {
+        "version": "1.8.0"
+    },
+    "sonata-project/media-bundle": {
+        "version": "3.12.0"
+    },
+    "studio-42/elfinder": {
+        "version": "2.1.37"
+    },
     "symfony/asset": {
         "version": "v4.0.8"
     },
     "symfony/cache": {
         "version": "v4.0.8"
+    },
+    "symfony/class-loader": {
+        "version": "v3.4.8"
     },
     "symfony/config": {
         "version": "v4.0.8"
@@ -129,6 +249,9 @@
         "version": "v4.0.8"
     },
     "symfony/event-dispatcher": {
+        "version": "v4.0.8"
+    },
+    "symfony/expression-language": {
         "version": "v4.0.8"
     },
     "symfony/filesystem": {
@@ -194,6 +317,9 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.7.0"
     },
+    "symfony/process": {
+        "version": "v3.4.8"
+    },
     "symfony/property-access": {
         "version": "v4.0.8"
     },
@@ -205,6 +331,21 @@
             "version": "4.0",
             "ref": "cda8b550123383d25827705d05a42acf6819fe4e"
         }
+    },
+    "symfony/security-acl": {
+        "version": "v3.0.1"
+    },
+    "symfony/security-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
+        }
+    },
+    "symfony/security-core": {
+        "version": "v4.0.8"
     },
     "symfony/templating": {
         "version": "v4.0.8"
@@ -235,6 +376,9 @@
     },
     "symfony/yaml": {
         "version": "v4.0.8"
+    },
+    "tilleuls/ckeditor-sonata-media-bundle": {
+        "version": "v1.0.8"
     },
     "twig/extensions": {
         "version": "1.0",

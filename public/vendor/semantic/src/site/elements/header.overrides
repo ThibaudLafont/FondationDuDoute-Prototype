@@ -1,0 +1,11 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.masthead.container {
+    padding: 2.5rem 1rem;
+}
+.ui.masthead .content .sub.header {
+    border-top: @dividedBorder;
+    text-align: right;
+}

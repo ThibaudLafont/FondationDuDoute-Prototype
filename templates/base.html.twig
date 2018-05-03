@@ -1,12 +1,68 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!DOCTYPE html><html>
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    {% include 'elements/_sidebar.html.twig' %}
+
+    <!-- Site content [for sidebar] !-->
+    <div class="pusher">
+        <!-- Fixed menu -->
+        {% include 'elements/_fixed_menu.html.twig' %}
+
+        <div class="ui vertical center aligned segment container">
+            <!-- Main header Block -->
+            {% include 'elements/_main_header.html.twig' %}
+
+            <!-- Body Block -->
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+    <footer class="ui inverted clearing segment">
+        <div class="ui tiny images">
+            <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui image">
+            <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui image">
+            <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui image">
+            <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui image">
+        </div>
+        <a class="ui right floated image label">
+            <img src="/uploads/media/maquetteUT.jpg">
+            Créé par Sysmod-Web
+        </a>
+    </footer>
+
+    <!-- JQuery -->
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <!-- Semantic-UI -->
+    <script src="/vendor/semantic/dist/semantic.min.js"></script>
+
+    <script>
+        /* Sticky Menu */
+        //        $('ui.sticky.launch-menu').sticky({
+        //            pushing: true
+        //        });
+
+        /* Sidebar */
+        $('.item.toggle-sidebar').click(function(){
+            $('body .ui.sidebar')
+                .sidebar('setting', 'transition', 'overlay')
+                .sidebar('toggle')
+            ;
+        });
+    </script>
+
+    <!-- Specific JS Block -->
+    {% block javascripts %}{% endblock %}
+</body>
 </html>

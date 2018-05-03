@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /media/gallery
+
+media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /media
+
+#admin_sonata_media_media_upload:
+#    controller: ApplicationSonataMediaBundle:MediaAdmin:upload
+#    path: /admin/sonata/media/media/upload
+#    defaults:
+#        _sonata_admin: sonata.media.admin.media
+#        _sonata_name: admin_sonata_media_media_upload
+
+fm_elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
+
+

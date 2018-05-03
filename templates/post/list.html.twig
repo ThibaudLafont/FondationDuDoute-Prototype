@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- Posts -->
+<div class="ui posts cards grid container">
+    {% for post in posts %}
+        <!-- Post Item -->
+        <section class="four wide column">
+            <div class="ui card">
+                <!-- Image Block -->
+                <div class="blurring dimmable image">
+                    <!-- Dimmer link -->
+                    <div class="ui inverted dimmer">
+                        <div class="content">
+                            <div class="center">
+                                <div class="ui primary button">Consulter</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item image -->
+                    <img src="/uploads/media/maquetteUT.jpg">
+                </div>
+
+                <!-- Content block -->
+                <div class="content">
+                    <!-- Top row infos -->
+                    <a class="left aligned header">Titre du post</a>
+                    <div class="left aligned description">
+                        Résumé court du post en quelques mots
+                    </div>
+                </div>
+                <!-- Horizontal labeled list -->
+                <div class="ui extra content">
+                    <div class="center aligned">
+                        <div class="ui large horizontal divided list">
+                            <!-- Pictures block -->
+                            <div class="item">
+                                <div class="content">
+                                    <i class="ui camera retro icon"></i>
+                                    6
+                                </div>
+                            </div>
+
+                            <!-- Videos Block -->
+                            <div class="item">
+                                <div class="content">
+                                    <i class="ui film icon"></i>
+                                    12
+                                </div>
+                            </div>
+
+                            <!-- Music Block -->
+                            <div class="item">
+                                <div class="content">
+                                    <i class="ui music icon"></i>
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        /* Post cards dimmer */
+        $('.posts.cards .image').dimmer({
+            on: 'hover'
+        });
+    </script>
+{% endblock %}
