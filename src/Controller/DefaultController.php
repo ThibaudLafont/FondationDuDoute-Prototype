@@ -69,9 +69,30 @@ class DefaultController extends Controller
      */
     public function listPostsAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository(Post::class)->findAll();
+        return $this->render('post/list.html.twig');
+    }
 
-        return $this->render('post/list.html.twig', ['posts' => $posts]);
+    /**
+     * @return Response
+     * @Route(
+     *     "/artists",
+     *     name="artist_list"
+     * )
+     */
+    public function listArtistAction()
+    {
+        return $this->render('artist/list.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
+     *     "/books",
+     *     name="book_list"
+     * )
+     */
+    public function listConsultAction()
+    {
+        return $this->render('book/list.html.twig');
     }
 }

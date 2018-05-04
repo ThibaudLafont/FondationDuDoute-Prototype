@@ -3,7 +3,7 @@
 *******************************/
 
 .ui.masthead.container {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 0rem;
 }
 .ui.masthead .content .sub.header {
     border-top: @dividedBorder;

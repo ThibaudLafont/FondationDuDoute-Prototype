@@ -1,23 +1,31 @@
 {% extends 'base.html.twig' %}
 
+{% block main_title %}
+    Fiches thématiques
+{% endblock %}
+{% block sub_main_title %}
+    6 fiches
+{% endblock %}
+
 {% block body %}
 <!-- Posts -->
 <div class="ui posts cards grid container">
-    {% for post in posts %}
+    {% for i in 1..6 %}
         <!-- Post Item -->
         <section class="four wide column">
-            <div class="ui card">
-                <!-- Image Block -->
-                <div class="blurring dimmable image">
-                    <!-- Dimmer link -->
-                    <div class="ui inverted dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui primary button">Consulter</div>
-                            </div>
+            <!-- Card -->
+            <div class="ui dimmable pink card">
+                <!-- Dimmer link -->
+                <a class="ui dimmer">
+                    <div class="content">
+                        <div class="center">
+                            <div class="ui primary button">Consulter</div>
                         </div>
                     </div>
+                </a>
 
+                <!-- Image Block -->
+                <div class="ui fluid image">
                     <!-- Item image -->
                     <img src="/uploads/media/maquetteUT.jpg">
                 </div>
@@ -30,6 +38,7 @@
                         Résumé court du post en quelques mots
                     </div>
                 </div>
+
                 <!-- Horizontal labeled list -->
                 <div class="ui extra content">
                     <div class="center aligned">
@@ -69,7 +78,7 @@
 {% block javascripts %}
     <script>
         /* Post cards dimmer */
-        $('.posts.cards .image').dimmer({
+        $('.posts.cards .card').dimmer({
             on: 'hover'
         });
     </script>

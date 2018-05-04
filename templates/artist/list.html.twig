@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block main_title %}
+    Sites des artistes
+{% endblock %}
+{% block sub_main_title %}
+    15 artistes
+{% endblock %}
+
+{% block body %}
+    <div class="ui container">
+        <div class="ui center aligned four column grid">
+            <!-- Content -->
+            {% for i in 1..15 %}
+                <div class="column">
+                    <a class="ui blue card" title="Consulter" website-url="http://lucienlafont.fr">
+                        <div class="ui fluid image">
+                            <!-- Blue Ribbon -->
+                            <div class="ui blue ribbon label">
+                                <i class="user icon"></i> Nom de l'artiste
+                            </div>
+
+                            <!-- Main Picture -->
+                            <img src="/uploads/media/maquetteUT.jpg">
+                        </div>
+                        <div class="test">Lalala</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="ui page dimmer">
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+
+        $('a.ui.blue.card').click(function(){
+
+            var url = $(this).attr('website-url');
+            var embed = document.createElement("embed");
+            embed.src = url;
+
+            $('.page.dimmer')
+                .dimmer('add content', embed)
+                .dimmer('toggle')
+        });
+    </script>
+{% endblock %}

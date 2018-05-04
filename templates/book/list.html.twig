@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block main_title %}
+    Consultation numérique
+{% endblock %}
+{% block sub_main_title %}
+    15 livres
+{% endblock %}
+
+{% block body %}
+    <div class="ui container">
+        <div class="ui center aligned four column grid">
+            <!-- Content -->
+            {% for i in 1..15 %}
+                <div class="column">
+                    <div class="ui yellow card">
+                        <div class="ui fluid dimmable image">
+                            <div class="ui left aligned dimmer">
+                                <div class="center aligned content">
+                                    <p>
+                                        Résumé en quelques mots du livre d'environ 220 charactères ce qui représente un peu plus
+                                        que ce texte.
+                                    </p>
+                                    <button class="ui primary button">Consulter</button>
+                                </div>
+                            </div>
+                            <img src="/uploads/media/maquetteUT.jpg">
+                        </div>
+                        <div class="left aligned content">
+                            <div class="header">Titre du livre</div>
+                            <div class="meta">
+                                <span class="right floated time">1986</span>
+                                <span class="category">Jean Autheur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        /* Post cards dimmer */
+        $('.dimmable.image').dimmer({
+            on: 'hover'
+        });
+    </script>
+{% endblock %}
