@@ -63,6 +63,7 @@
             content.innerHTML = "<div class=\"ui transparent segment\">" +
                 "<h2 class='ui white header'>" +
                 "   Pique News Magazine 11/2011" +
+                "   <i style='float:right;cursor:pointer;' class='ui close red icon'></i>" +
                 "</h2>" +
                 "</div>" +
                 "<div class=\"ui center aligned transparent segment\">\n" +
@@ -103,6 +104,9 @@
             // Next button
             $('#right-button').click(function(){
                 $('#flipbook').turn('next');
+            });
+            $('i').click(function(){
+                $('.page.dimmer').dimmer('hide')
             });
             // Keyboard control
             $(window).bind('keydown', function(e){
