@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="/css/player.css">
+{% endblock %}
+
 {% block main_title %}
     Titre du post
 {% endblock %}
@@ -45,37 +49,23 @@
             </div>
             <div class="ui four wide column">
                 <div class="ui segments">
-                    <div class="ui segment">
-                        <i class="ui fast backward big icon"></i>
-                        <i class="ui play big icon"></i>
-                        <i class="ui fast forward big icon"></i>
-                    </div>
-                        <div class="ui segment">
-                            <div class="ui fluid vertical menu">
-                                {% for i in 1..4 %}
-                                <a class="item">
-                                    {{ i }} - Nom du titre
-                                </a>
-                                {% endfor %}
-                            </div>
+                    <div id="player" class="ui segment">
+                        <div class="content">
+                            {% include 'elements/_player.html.twig' %}
                         </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="list" class="ui fluid vertical menu">
+                        </div>
+                    </div>
                 </div>
             </div>  
         </div>
     </section>
-    {#<img src="/uploads/media/maquetteUT.jpg" alt="" class="ui tiny image">#}
-    {#<i class="ui fast backward big icon"></i>#}
-    {#<i class="ui play big icon"></i>#}
-    {#<i class="ui fast forward big icon"></i>#}
 {% endblock %}
 
 {% block javascripts %}
     <script src="/vendor/node_modules/howler/dist/howler.js"></script>
-    <script>
-        var sound = new Howl({
-            src: ['/song/1.mp3']
-        });
-
-//        sound.play();
-    </script>
+    <script src="/js/siriwave.js"></script>
+    <script src="/js/player.js"></script>
 {% endblock %}
