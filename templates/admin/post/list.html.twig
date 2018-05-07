@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block main_title %}
+    Fiches thématiques
+{% endblock %}
+{% block sub_main_title %}
+    6 fiches
+{% endblock %}
+
+{% block body %}
+<!-- Posts -->
+<div class="ui container">
+    <table class="ui compact celled table">
+        <thead>
+            <tr>
+                <th class="center aligned">Publier</th>
+                <th>Titre</th>
+                <th>Date</th>
+                {#<th class="center aligned">Voir</th>#}
+                <th class="center aligned">Suppr.</th>
+                <th class="center aligned">Modif.</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for i in 1..13 %}
+            <tr>
+                <td class="center aligned collapsing">
+                    <div class="ui fitted slider checkbox">
+                        <input type="checkbox" checked="checked"> <label></label>
+                    </div>
+                </td>
+                <td>
+                    Titre du post
+                </td>
+                <td class="collapsing">03/05/2018</td>
+                {#<td class="center aligned collapsing">#}
+                    {#<a href="#" class="ui blue icon button"><i class="ui icon external resource"></i></a>#}
+                {#</td>#}
+                <td class="center aligned collapsing">
+                    <a href="#" class="ui red icon button"><i class="ui icon trash"></i></a>
+                </td>
+                <td class="center aligned collapsing">
+                    <a href="#" class="ui green icon button"><i class="ui icon edit"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        /* Post cards dimmer */
+        $('.posts.cards .fluid.image').dimmer({
+            on: 'hover'
+        });
+    </script>
+{% endblock %}
