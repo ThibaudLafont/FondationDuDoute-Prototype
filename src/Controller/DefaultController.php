@@ -63,6 +63,18 @@ class DefaultController extends Controller
     /**
      * @return Response
      * @Route(
+     *     "/",
+     *     name="homepage"
+     * )
+     */
+    public function homeAction()
+    {
+        return $this->render('default/homepage.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
      *     "/posts",
      *     name="post_list"
      * )
@@ -70,6 +82,18 @@ class DefaultController extends Controller
     public function listPostsAction()
     {
         return $this->render('post/list.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
+     *     "/posts/show",
+     *     name="post_show"
+     * )
+     */
+    public function showPostAction()
+    {
+        return $this->render('post/show.html.twig');
     }
 
     /**
@@ -94,5 +118,17 @@ class DefaultController extends Controller
     public function listConsultAction()
     {
         return $this->render('book/list.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
+     *     "/books/show",
+     *     name="book_show"
+     * )
+     */
+    public function showConsultAction()
+    {
+        return $this->render('book/show.html.twig');
     }
 }

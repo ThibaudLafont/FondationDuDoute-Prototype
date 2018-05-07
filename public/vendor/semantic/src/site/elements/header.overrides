@@ -9,3 +9,7 @@
     border-top: @dividedBorder;
     text-align: right;
 }
+
+.ui.white.header{
+    color: white
+}

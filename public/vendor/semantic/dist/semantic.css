@@ -7488,6 +7488,10 @@ a.ui.inverted.grey.header:hover {
   border-top: 1px solid rgba(34, 36, 38, 0.15);
   text-align: right;
 }
+
+.ui.white.header {
+  color: white;
+}
 /*!
  * # Semantic UI 2.3.1 - Icon
  * http://github.com/semantic-org/semantic-ui/
@@ -18781,6 +18785,11 @@ ol.ui.horizontal.list li:before,
 footer.ui.segments {
   margin: 4.5rem 0 0 0;
   border-radius: 0;
+}
+
+.ui.segment.transparent,
+.ui.segments.transparent {
+  background: transparent;
 }
 /*!
  * # Semantic UI 2.3.1 - Step

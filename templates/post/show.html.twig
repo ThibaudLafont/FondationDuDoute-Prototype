@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block main_title %}
+    Titre du post
+{% endblock %}
+{% block sub_main_title %}
+    03/05/2018
+{% endblock %}
+
+{% block body %}
+    <section class="ui container">
+        <div class="ui grid">
+            <div class="ui twelve wide column">
+                <article class="ui left aligned clearing segment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <h2>Titre de niveau 1</h2>
+                    <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui floated left small image">
+                    <p>Consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Titre de niveau 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <h3>Titre de niveau 2</h3>
+                    <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui floated right small image">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </article>
+            </div>
+            <div class="ui four wide column">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <i class="ui fast backward big icon"></i>
+                        <i class="ui play big icon"></i>
+                        <i class="ui fast forward big icon"></i>
+                    </div>
+                        <div class="ui segment">
+                            <div class="ui fluid vertical menu">
+                                {% for i in 1..4 %}
+                                <a class="item">
+                                    {{ i }} - Nom du titre
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    {#<img src="/uploads/media/maquetteUT.jpg" alt="" class="ui tiny image">#}
+    {#<i class="ui fast backward big icon"></i>#}
+    {#<i class="ui play big icon"></i>#}
+    {#<i class="ui fast forward big icon"></i>#}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/vendor/node_modules/howler/dist/howler.js"></script>
+    <script>
+        var sound = new Howl({
+            src: ['/song/1.mp3']
+        });
+
+//        sound.play();
+    </script>
+{% endblock %}
