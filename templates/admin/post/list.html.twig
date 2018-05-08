@@ -9,8 +9,12 @@
 
 {% block body %}
 <!-- Posts -->
-<div class="ui container">
-    <table class="ui compact celled table">
+<div class="ui left aligned container">
+    <button id="add-button" class="circular ui labeled icon green button">
+        <i class="icon plus"></i>
+        Ajouter une fiche
+    </button>
+    <table id="list" class="ui compact celled table">
         <thead>
             <tr>
                 <th class="center aligned">Publier</th>
@@ -52,9 +56,5 @@
 
 {% block javascripts %}
     <script>
-        /* Post cards dimmer */
-        $('.posts.cards .fluid.image').dimmer({
-            on: 'hover'
-        });
     </script>
 {% endblock %}
