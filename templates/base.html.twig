@@ -18,7 +18,7 @@
     </style>
     {% block stylesheets %}{% endblock %}
 </head>
-<body class="pushable dimmable">
+<body class="pushable">
     <!-- Sidebar -->
     {% include 'elements/_sidebar.html.twig' %}
 
@@ -28,7 +28,7 @@
         {% include 'elements/_fixed_menu.html.twig' %}
 
         <div class="ui main-content vertical center aligned segment">
-            <div class="container">
+            <div class="container dimmable">
                 <!-- Main header Block -->
                 {#{% include 'elements/_main_header.html.twig' %}#}
                 <div class="ui masthead container">
