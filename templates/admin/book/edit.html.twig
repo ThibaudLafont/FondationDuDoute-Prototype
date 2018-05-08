@@ -1,14 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <style>
-        body > div.pusher > div.ui.main-content.vertical.center.aligned.segment > div > div.ui.left.aligned.container > form > div:nth-child(2) > div > div > div.ck.ck-editor__main > div {
-            height: 350px;
-        }
-    </style>
 {% endblock %}
+
 {% block main_title %}
-    Titre du post
+    Titre du livre
 {% endblock %}
 {% block sub_main_title %}
     Modifier
@@ -21,40 +17,45 @@
         <div class="ui field">
             <label>Titre</label>
             <div class="field">
-                <input type="text" value="Titre de la fiche">
-            </div>
-        </div>
-        <div class="ui field">
-            <label>Contenu</label>
-            <div class="field">
-                <textarea id="ckeditor" name="editor">Contenu du post</textarea>
+                <input type="text" value="Titre du livre">
             </div>
         </div>
         <div class="ui field">
             <label>Médias</label>
             <div class="ui segment">
-                <div class="ui six column grid">
-                    <div class="row">
+                <button id="add-media" class="ui icon labeled green button">
+                    <i class="ui plus icon"></i>
+                    Nouvelle image
+                </button>
+                <table class="ui compact table">
+                    <thead>
+                    <tr>
+                        <th class="center aligned">Aperçu</th>
+                        <th class="collapsing">Actions</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
                         {% for i in 1..6 %}
-                            <div class="ui column">
-                                <div class="ui card">
-                                    <img src="/uploads/media/maquetteUT.jpg" alt="" class="ui fluid image">
-                                    <div class="delete-media ui bottom attached red button">
-                                        <i class="ui trash icon"></i>
-                                        Supprimer
+                            <tr class="ui column">
+                                <td><img src="/uploads/media/maquetteUT.jpg" alt="" class="ui medium image"></td>
+                                <td>
+                                    <div class="ui buttons">
+                                        <div class="ui icon button">
+                                            <i class="ui arrow up icon"></i>
+                                        </div>
+                                        <div class="delete-button ui icon red button">
+                                            <i class="ui trash icon"></i>
+                                        </div>
+                                        <div class="ui icon button">
+                                            <i class="ui arrow down icon"></i>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </td>
+                            </tr>
                         {% endfor %}
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <button id="add-media" class="ui icon button">
-                                <i class="ui plus icon"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="ui right floated green button">Modifier
@@ -116,22 +117,12 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="https://cdn.ckeditor.com/ckeditor5/10.0.0/classic/ckeditor.js"></script>
     <script>
-        // CKeditor
-        ClassicEditor
-            .create( document.querySelector( '#ckeditor' ))
-        ;
-
-        window.onbeforeunload = function(e) {
-            e.preventDefault();
-        };
-
         // Add media
         $('#add-media').click(function(){
-            $('.ui.page.dimmer').dimmer('show');
+            $('.ui.page.dimmer').dimmer('toggle');
         });
-        $('.delete-media').click(function(){
+        $('.delete-button').click(function(){
             $('.ui.modal').modal('show');
         });
     </script>

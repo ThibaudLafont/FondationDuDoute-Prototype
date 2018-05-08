@@ -10,16 +10,15 @@
 {% block body %}
 <!-- Posts -->
 <div class="ui left aligned container">
-    <button class="circular ui icon labeled green button">
+    <a href="/admin/books/add?#" class="circular ui icon labeled green button">
         <i class="icon plus"></i>
         Ajouter un livre
-    </button>
+    </a>
     <table class="ui compact celled table">
         <thead>
             <tr>
                 <th class="center aligned">Publier</th>
                 <th>Titre</th>
-                {#<th class="center aligned">Voir</th>#}
                 <th class="center aligned">Suppr.</th>
                 <th class="center aligned">Modif.</th>
             </tr>
@@ -37,23 +36,38 @@
                     Titre du livre
                 </td>
                 <td class="center aligned collapsing">
-                    <a href="#" class="ui red icon button"><i class="ui icon trash"></i></a>
+                    <a href="#" class="delete-button ui red icon button"><i class="ui icon trash"></i></a>
                 </td>
                 <td class="center aligned collapsing">
-                    <a href="#" class="ui green icon button"><i class="ui icon edit"></i></a>
+                    <a href="/admin/books/edit?#" class="ui green icon button"><i class="ui icon edit"></i></a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 </div>
+<div class="ui basic modal">
+    <div class="ui icon header">
+        <i class="trash icon"></i>
+        Supprimer Titre du livre ?
+    </div>
+    <div class="actions">
+        <div class="ui red basic cancel inverted button">
+            <i class="remove icon"></i>
+            Annuler
+        </div>
+        <div class="ui green ok inverted button">
+            <i class="checkmark icon"></i>
+            Oui
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block javascripts %}
     <script>
-        /* Post cards dimmer */
-        $('.posts.cards .fluid.image').dimmer({
-            on: 'hover'
+        $('.delete-button').click(function(){
+            $('.ui.modal').modal('show');
         });
     </script>
 {% endblock %}
