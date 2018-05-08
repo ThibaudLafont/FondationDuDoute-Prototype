@@ -45,13 +45,25 @@ class AdminController extends Controller
     /**
      * @return Response
      * @Route(
-     *     "/admin/posts/show",
-     *     name="post_show"
+     *     "/admin/posts/form",
+     *     name="post_form"
      * )
      */
-    public function showPostAction()
+    public function formPostAction()
     {
-        return $this->render('post/show.html.twig');
+        return $this->render('admin/post/form.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
+     *     "/admin/posts/edit",
+     *     name="post_form_edit"
+     * )
+     */
+    public function editFormPostAction()
+    {
+        return $this->render('admin/post/edit.form.html.twig');
     }
 
     /**
@@ -81,12 +93,24 @@ class AdminController extends Controller
     /**
      * @return Response
      * @Route(
-     *     "/admin/books/show",
-     *     name="book_show"
+     *     "/admin/books/add",
+     *     name="book_add"
      * )
      */
-    public function showConsultAction()
+    public function addConsultAction()
     {
-        return $this->render('book/show.html.twig');
+        return $this->render('admin/book/add.html.twig');
+    }
+
+    /**
+     * @return Response
+     * @Route(
+     *     "/admin/books/edit",
+     *     name="book_edit"
+     * )
+     */
+    public function editConsultAction()
+    {
+        return $this->render('admin/book/edit.html.twig');
     }
 }
